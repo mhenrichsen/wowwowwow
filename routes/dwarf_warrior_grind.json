@@ -1,0 +1,142 @@
+{
+ "name": "Dwarf warrior - beast grind, Dun Morogh then Loch Modan (grind_scout.py)",
+ "stages": [
+  {
+   "name": "Coldridge - young wolves and small crag boars",
+   "min_level": 1,
+   "max_level": 4,
+   "center": [
+    -6303.2,
+    403.1,
+    381.9
+   ],
+   "radius": 80.0,
+   "mobs": [
+    704,
+    705,
+    708
+   ],
+   "spawns_in_area": 32
+  },
+  {
+   "name": "Coldridge Valley - troll whelps, troggs and boars (stay in the start zone until 6)",
+   "min_level": 4,
+   "max_level": 6,
+   "center": [
+    -6469.0,
+    360.0,
+    378.0
+   ],
+   "radius": 90.0,
+   "mobs": [
+    706,
+    708,
+    724,
+    707
+   ],
+   "spawns_in_area": 80
+  },
+  {
+   "name": "Dun Morogh west of Kharanos - crag boars, juvenile leopards, young bears",
+   "min_level": 6,
+   "max_level": 7,
+   "center": [
+    -5849.5,
+    -158.4,
+    360.7
+   ],
+   "radius": 80.0,
+   "mobs": [
+    1125,
+    1128,
+    1199
+   ],
+   "spawns_in_area": 15
+  },
+  {
+   "name": "Dun Morogh south of Kharanos - crag boars, ice claw bears, leopards",
+   "min_level": 7,
+   "max_level": 8,
+   "center": [
+    -5956.1,
+    -527.1,
+    408.0
+   ],
+   "radius": 80.0,
+   "mobs": [
+    1125,
+    1126,
+    1196,
+    1201
+   ],
+   "spawns_in_area": 13
+  },
+  {
+   "name": "Dun Morogh east - elder crag boars, ice claw bears, leopards",
+   "min_level": 8,
+   "max_level": 10,
+   "center": [
+    -5799.7,
+    -1150.1,
+    377.6
+   ],
+   "radius": 80.0,
+   "mobs": [
+    1127,
+    1196,
+    1201
+   ],
+   "spawns_in_area": 13
+  },
+  {
+   "name": "Loch Modan by Thelsamar - elder black bears, forest lurkers, mountain boars",
+   "min_level": 10,
+   "max_level": 13,
+   "center": [
+    -5102.8,
+    -2913.5,
+    326.8
+   ],
+   "radius": 80.0,
+   "mobs": [
+    1186,
+    1190,
+    1195
+   ],
+   "spawns_in_area": 13
+  },
+  {
+   "name": "Loch Modan south - cliff lurkers, grizzled bears, mangy boars",
+   "min_level": 13,
+   "max_level": 15,
+   "center": [
+    -5424.7,
+    -3804.2,
+    313.4
+   ],
+   "radius": 80.0,
+   "mobs": [
+    1184,
+    1188,
+    1191
+   ],
+   "spawns_in_area": 8
+  },
+  {
+   "name": "Loch Modan south-east - black bear patriarchs, elder mountain boars",
+   "min_level": 15,
+   "max_level": 21,
+   "center": [
+    -5212.6,
+    -3844.2,
+    324.6
+   ],
+   "radius": 80.0,
+   "mobs": [
+    1189,
+    1192
+   ],
+   "spawns_in_area": 9
+  }
+ ]
+}

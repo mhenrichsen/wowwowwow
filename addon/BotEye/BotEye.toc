@@ -1,0 +1,6 @@
+## Interface: 16001, 11508, 11507, 11506, 11505, 11504, 11503, 11502, 11501, 11500, 20505, 30405, 40402, 50500, 110200, 110205, 110207, 120000, 120001
+## Title: BotEye
+## Notes: Paints player/target/quest state as a pixel strip for the local bot.
+## SavedVariables: BotEyeDB
+## OptionalDeps: RXPGuides
+BotEye.lua

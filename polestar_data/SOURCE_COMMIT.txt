@@ -1,0 +1,2 @@
+  "sha": "4463e5546bb593cbed6c4573ee9079a82367eb75",
+https://github.com/fitzforge/polestar (GPL-3.0) fetched 2026-10-17

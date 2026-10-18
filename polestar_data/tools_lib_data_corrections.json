@@ -1,0 +1,1972 @@
+{
+	"_about": "Polestar's own fixes to the merged reference data (data build applies them after QuestieDB, before recordings). One entry per fact, with where the fact comes from. quests: `set` replaces fields. npcs/objects: `set` replaces fields (Forever elite and rare ranks, which QuestieDB's Forever store lacks); `addSpawns` adds { \"<uiMapID>\": { f, pts } } maps the entity lacks (an existing map is replaced). items: `removeDrops` { npc: [ids], object: [ids] } and `removeVendors` [ids] drop wrong sources the pfQuest/QuestieDB union kept. Documented in docs/ARCHITECTURE.md (Reference data, Sources and precedence).",
+	"quests": {
+		"26": {
+			"set": {
+				"races": 4294967304
+			},
+			"note": "A Lesson to Learn (Druid Aquatic Form, Alliance) is open to Night Elf and Skyborne Druids: Wowhead Forever https://www.wowhead.com/forever/quest=26 lists Races [race=4], [race=95] (checked 2026-10-16). The merged data has races 8 (Night Elf only), while Trial of the Sea Lion (272) before it already has Skyborne, so Skyborne druids stopped halfway."
+		},
+		"29": {
+			"set": {
+				"races": 4294967304
+			},
+			"note": "Trial of the Lake (Druid Aquatic Form, Alliance) is open to Night Elf and Skyborne Druids: Wowhead Forever https://www.wowhead.com/forever/quest=29 lists Races [race=4], [race=95] (checked 2026-10-16). The merged data has races 8 (Night Elf only), while Trial of the Sea Lion (272) before it already has Skyborne, so Skyborne druids stopped halfway."
+		},
+		"425": {
+			"set": {
+				"pre": [
+					91921
+				],
+				"preAny": [
+					91921
+				]
+			},
+			"note": "Ivar the Foul (Silverpine, Rane Yorick) comes after Return to Quinn (Again) 91921 on Forever, not straight after Return to Quinn 430: a Wowhead Forever comment on https://www.wowhead.com/forever/quest=425 (2026-10-04: \"In Forever, you need to complete Return to Quinn (Again) before this is available\") and one on https://www.wowhead.com/forever/quest=91921 (\"Allows you to start quest Ivar the Foul\"), checked 2026-10-17. Issue #51. pfQuest and QuestieDB 1.0.5 have the Classic prerequisite 430."
+		},
+		"465": {
+			"set": {
+				"pre": [
+					98221
+				],
+				"preAny": [
+					98221
+				]
+			},
+			"note": "Nek'rosh's Gambit (Wetlands, Captain Stoutfist) comes after the Forever quest From the Ashes 98221, not straight after War Banners 464: issue #225 (Lou-Saydus, 2026-10-17, in game at level 29): Stoutfist did not offer 465 with 464 handed in and offered From the Ashes, \"the next quest in the chain after War Banners and before Nek'rosh's Gambit\". Wowhead Forever's quest list marks 465's description reworded. pfQuest and QuestieDB 1.0.5 have the Classic prerequisite 464."
+		},
+		"1501": {
+			"set": {
+				"races": 146
+			},
+			"note": "Creature of the Void (Warlock voidwalker) is open to Orc, Undead and Troll Warlocks: Wowhead Forever https://www.wowhead.com/forever/quest=1501 lists Races [race=2], [race=5], [race=8] (checked 2026-10-14). The merged data has races 2 (Orc only), which excludes the Troll Warlocks the Durotar guide sends to Ruzan."
+		},
+		"1504": {
+			"set": {
+				"races": 146
+			},
+			"note": "The Binding (Warlock voidwalker, after 1501) is open to Orc, Undead and Troll Warlocks: Wowhead Forever https://www.wowhead.com/forever/quest=1504 lists Races [race=2], [race=5], [race=8] (checked 2026-10-14). The merged data has races 2 (Orc only)."
+		},
+		"1919": {
+			"set": {
+				"races": 4294967361
+			},
+			"note": "Report to Jennea (Alliance mage robe chain) is open to Human, Gnome and Skyborne Mages: Wowhead Forever https://www.wowhead.com/forever/quest=1919 lists Races [race=1], [race=7], [race=95] (checked 2026-10-16). The merged data has races 65 (Human and Gnome), while Investigate the Blue Recluse (1920) in the middle already has Skyborne."
+		},
+		"1921": {
+			"set": {
+				"races": 4294967361
+			},
+			"note": "Gathering Materials (Alliance mage robe chain) is open to Human, Gnome and Skyborne Mages: Wowhead Forever https://www.wowhead.com/forever/quest=1921 lists Races [race=1], [race=7], [race=95] (checked 2026-10-16). The merged data has races 65 (Human and Gnome), while Investigate the Blue Recluse (1920) in the middle already has Skyborne."
+		},
+		"1959": {
+			"set": {
+				"races": 146
+			},
+			"note": "Report to Anastasia (Horde mage robe chain) is open to Orc, Undead and Troll Mages: Wowhead Forever https://www.wowhead.com/forever/quest=1959 lists Races [race=2], [race=5], [race=8] (checked 2026-10-16). The merged data has races 144 (Undead and Troll), which leaves Orc mages out of the chain that 1961 (races 146) continues."
+		},
+		"1960": {
+			"set": {
+				"races": 146
+			},
+			"note": "Investigate the Alchemist Shop (Horde mage robe chain) is open to Orc, Undead and Troll Mages: Wowhead Forever https://www.wowhead.com/forever/quest=1960 lists Races [race=2], [race=5], [race=8] (checked 2026-10-16). The merged data has races 144 (Undead and Troll), which leaves Orc mages out of the chain that 1961 (races 146) continues."
+		},
+		"5061": {
+			"set": {
+				"races": 4294967304
+			},
+			"note": "Aquatic Form (Druid Aquatic Form, Alliance) is open to Night Elf and Skyborne Druids: Wowhead Forever https://www.wowhead.com/forever/quest=5061 lists Races [race=4], [race=95] (checked 2026-10-16). The merged data has races 8 (Night Elf only), while Trial of the Sea Lion (272) before it already has Skyborne, so Skyborne druids stopped halfway."
+		},
+		"6123": {
+			"set": {
+				"races": 4294967304
+			},
+			"note": "Gathering the Cure (Druid Cure Poison, Alliance) is open to Night Elf and Skyborne Druids: Wowhead Forever https://www.wowhead.com/forever/quest=6123 lists Races [race=4], [race=95] (checked 2026-10-16). The merged data has races 8 (Night Elf only), while 6121 and 6122 before it already have Skyborne."
+		},
+		"6124": {
+			"set": {
+				"races": 4294967304
+			},
+			"note": "Curing the Sick (Druid Cure Poison, Alliance) is open to Night Elf and Skyborne Druids: Wowhead Forever https://www.wowhead.com/forever/quest=6124 lists Races [race=4], [race=95] (checked 2026-10-16). The merged data has races 8 (Night Elf only), while 6121 and 6122 before it already have Skyborne."
+		},
+		"6125": {
+			"set": {
+				"races": 4294967304
+			},
+			"note": "Power over Poison (Druid Cure Poison, Alliance) is open to Night Elf and Skyborne Druids: Wowhead Forever https://www.wowhead.com/forever/quest=6125 lists Races [race=4], [race=95] (checked 2026-10-16). The merged data has races 8 (Night Elf only), while 6121 and 6122 before it already have Skyborne."
+		},
+		"7637": {
+			"set": {
+				"pre": [],
+				"preAny": [
+					7638,
+					7670
+				]
+			},
+			"note": "Emphasis on Sacrifice (Paladin charger) is for Human and Dwarf Paladins and starts at Lord Grayson Shadowbreaker: Wowhead Forever https://www.wowhead.com/forever/quest=7637 lists Races [race=1], [race=3] and Start npc=928 (checked 2026-10-16). Both races reach him by their own Lord Grayson Shadowbreaker quest: 7638 for Humans, 7670 for Dwarves, whose next is 7637 in the merged data. The compiled guide had only the Human's 7638 as its prerequisite, so a Dwarf read as lacking it."
+		},
+		"87760": {
+			"set": {
+				"pre": [
+					4722,
+					4723,
+					4725,
+					4727,
+					4728,
+					4730,
+					4731,
+					4732,
+					4733
+				],
+				"preAll": [
+					4722,
+					4723,
+					4725,
+					4727,
+					4728,
+					4730,
+					4731,
+					4732,
+					4733
+				],
+				"preAny": []
+			},
+			"note": "Holy Diver (Darkshore, Gwennyth Bly'Leggonde) is offered only once all nine Beached Sea Creature and Beached Sea Turtle quests are handed in: a Wowhead Forever comment on https://www.wowhead.com/forever/quest=87760 (2026-10-06: \"This quest only unlocks after you've completed all 9 beached sea creature quests\"), checked 2026-10-17. Issue #51. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"88758": {
+			"set": {
+				"pre": [
+					88757
+				],
+				"preAny": [
+					88757
+				]
+			},
+			"note": "Sentiments of the Lost (Wetlands, Essene Villard) comes after Accessories of the Lost 88757: the quest chain on https://foreverchanges.pro/quest/88758, which for quests new in Forever comes from Wowhead's Forever database (checked 2026-10-17) lists \"1. Hearts of the Lost; 2. Accessories of the Lost; 3. Sentiments of the Lost\", and its text (\"one last favor\") follows Essene's repacking. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"91920": {
+			"set": {
+				"pre": [
+					430
+				],
+				"preAny": [
+					430
+				]
+			},
+			"note": "Wild Eyes (Silverpine, Quinn Yorick) comes after Return to Quinn 430: the quest chain on https://foreverchanges.pro/quest/91920, which for quests new in Forever comes from Wowhead's Forever database (checked 2026-10-17) lists \"1. Lost Deathstalkers; 2. Wild Hearts; 3. Return to Quinn; 4. Wild Eyes; 5. Return to Quinn (Again)\", and its text opens \"the potion made no noticeable difference\". QuestieDB 1.0.5 has no prerequisite."
+		},
+		"91921": {
+			"set": {
+				"pre": [
+					91920
+				],
+				"preAny": [
+					91920
+				]
+			},
+			"note": "Return to Quinn (Again) (Silverpine, Apothecary Renferrel) comes after Wild Eyes 91920: the quest chain on https://foreverchanges.pro/quest/91921, which for quests new in Forever comes from Wowhead's Forever database (checked 2026-10-17) lists it fifth, after Wild Eyes, and its text brings \"the new potion\". QuestieDB 1.0.5 has no prerequisite."
+		},
+		"92434": {
+			"set": {
+				"pre": [
+					545,
+					93680
+				],
+				"preAll": [
+					545,
+					93680
+				],
+				"preAny": []
+			},
+			"note": "Blood in the Streets (City of Dalaran, Horde) opens after Magus Wordeen Voidglare's other quests, Prison Break In 544 -> Dalaran Patrols 545 and Key to the City 93680: a Wowhead Forever comment on https://www.wowhead.com/forever/quest=92434 (2026-10-05: \"You need to complete all of Magus Wordeen Voidglare's other quests to start this quest\"), checked 2026-10-15. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"92458": {
+			"set": {
+				"breadcrumbs": [
+					92432
+				]
+			},
+			"note": "Heart of Disruption (City of Dalaran, Alliance) has An Alarming Request 92432 as its breadcrumb: a Wowhead Forever comment on https://www.wowhead.com/forever/quest=92432 (2026-10-03, \"Leads To: Heart of Disruption\" quest=92458), checked 2026-10-15."
+		},
+		"92459": {
+			"set": {
+				"pre": [
+					92458
+				],
+				"preAny": [
+					92458
+				]
+			},
+			"note": "Friend of the Kirin Tor (Image of Archmage Modera) comes after Heart of Disruption 92458, the City of Dalaran quest: the quest chain on https://foreverchanges.pro/quest/92459, which for quests new in Forever comes from Wowhead's Forever database (checked 2026-10-17) lists \"1. An Alarming Request; 2. Heart of Disruption; 3. Friend of the Kirin Tor\", and its text (\"The city is calming down ... Take this mote\") follows the dungeon. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"92479": {
+			"set": {
+				"classes": 4
+			},
+			"note": "A Scribbled Letter is the Human Hunter letter: it ends at Tordrin Sternblade 248415 <Hunter Trainer> in Northshire (Wowhead Forever npc=248415, checked 2026-10-12). QuestieDB 1.0.5 has requiredClasses 1 (Warrior)."
+		},
+		"92742": {
+			"set": {
+				"races": 4294967372
+			},
+			"note": "Alba Fairmoon's Toxic Soil chain (Westfall) is not for Humans: Wowhead Forever https://www.wowhead.com/forever/quest=92742 lists Races [race=3], [race=4], [race=7], [race=95] (reqrace 4294967372, checked 2026-10-17); a Wowhead comment asks \"An entire dungeon questline for all alliance races except humans?\". The merged data has races 4294967373, which includes Human (issue #144)."
+		},
+		"92744": {
+			"set": {
+				"races": 4294967372
+			},
+			"note": "Alba Fairmoon's Toxic Soil chain (Westfall) is not for Humans: Wowhead Forever https://www.wowhead.com/forever/quest=92744 lists Races [race=3], [race=4], [race=7], [race=95] (reqrace 4294967372, checked 2026-10-17); a Wowhead comment asks \"An entire dungeon questline for all alliance races except humans?\". The merged data has races 4294967373, which includes Human (issue #144)."
+		},
+		"92745": {
+			"set": {
+				"pre": [
+					92742
+				],
+				"preAny": [
+					92742
+				],
+				"races": 4294967372
+			},
+			"note": "The State of the Mines (Westfall, Alba Fairmoon) is offered only after Testing the Wells 92742 is handed in: its text on https://www.wowhead.com/forever/quest=92745 opens \"The well samples you collected contain toxic metals!\" (checked 2026-10-16), and issue #143 (SouthernStyleSims) saw it in game: Alba did not offer it until another of her quests was turned in. Murloc Gills (92744) gets no link: nothing shows it gating or gated. QuestieDB 1.0.5 has no prerequisite. Alba Fairmoon's Toxic Soil chain (Westfall) is not for Humans: Wowhead Forever https://www.wowhead.com/forever/quest=92745 lists Races [race=3], [race=4], [race=7], [race=95] (reqrace 4294967372, checked 2026-10-17); a Wowhead comment asks \"An entire dungeon questline for all alliance races except humans?\". The merged data has races 4294967373, which includes Human (issue #144)."
+		},
+		"92747": {
+			"set": {
+				"pre": [
+					92745
+				],
+				"preAny": [
+					92745
+				],
+				"races": 4294967372
+			},
+			"note": "Moonbrook Espionage (92747) is step 4 of Alba Fairmoon's Westfall storyline \"Toxic Soil\" 92742 -> 92744 -> 92745 -> 92747 -> 92748 -> 92749 -> 92750 -> 92751 -> 92752 -> 92753 -> 92819 (foreverchanges.pro https://foreverchanges.pro/quest/92753 Storyline box, from Wowhead's Forever database, checked 2026-10-15). QuestieDB 1.0.5 has no chain links for it. The State of the Mines (92745) itself comes after Testing the Wells (92742), seen in game (issue #143; see its own entry); Murloc Gills (92744) has no link. Alba Fairmoon's Toxic Soil chain (Westfall) is not for Humans: Wowhead Forever https://www.wowhead.com/forever/quest=92747 lists Races [race=3], [race=4], [race=7], [race=95] (reqrace 4294967372, checked 2026-10-17); a Wowhead comment asks \"An entire dungeon questline for all alliance races except humans?\". The merged data has races 4294967373, which includes Human (issue #144)."
+		},
+		"92748": {
+			"set": {
+				"pre": [
+					92747
+				],
+				"preAny": [
+					92747
+				],
+				"races": 4294967372
+			},
+			"note": "Explosive Consultation (92748) is step 5 of Alba Fairmoon's Westfall storyline \"Toxic Soil\" 92742 -> 92744 -> 92745 -> 92747 -> 92748 -> 92749 -> 92750 -> 92751 -> 92752 -> 92753 -> 92819 (foreverchanges.pro https://foreverchanges.pro/quest/92753 Storyline box, from Wowhead's Forever database, checked 2026-10-15). QuestieDB 1.0.5 has no chain links for it. Alba Fairmoon's Toxic Soil chain (Westfall) is not for Humans: Wowhead Forever https://www.wowhead.com/forever/quest=92748 lists Races [race=3], [race=4], [race=7], [race=95] (reqrace 4294967372, checked 2026-10-17); a Wowhead comment asks \"An entire dungeon questline for all alliance races except humans?\". The merged data has races 4294967373, which includes Human (issue #144)."
+		},
+		"92749": {
+			"set": {
+				"pre": [
+					92748
+				],
+				"preAny": [
+					92748
+				],
+				"races": 4294967372
+			},
+			"note": "A Dynamite Plan (92749) is step 6 of Alba Fairmoon's Westfall storyline \"Toxic Soil\" 92742 -> 92744 -> 92745 -> 92747 -> 92748 -> 92749 -> 92750 -> 92751 -> 92752 -> 92753 -> 92819 (foreverchanges.pro https://foreverchanges.pro/quest/92753 Storyline box, from Wowhead's Forever database, checked 2026-10-15). QuestieDB 1.0.5 has no chain links for it. Alba Fairmoon's Toxic Soil chain (Westfall) is not for Humans: Wowhead Forever https://www.wowhead.com/forever/quest=92749 lists Races [race=3], [race=4], [race=7], [race=95] (reqrace 4294967372, checked 2026-10-17); a Wowhead comment asks \"An entire dungeon questline for all alliance races except humans?\". The merged data has races 4294967373, which includes Human (issue #144)."
+		},
+		"92750": {
+			"set": {
+				"pre": [
+					92749
+				],
+				"preAny": [
+					92749
+				],
+				"races": 4294967372
+			},
+			"note": "Detonation at a Distance (92750) is step 7 of Alba Fairmoon's Westfall storyline \"Toxic Soil\" 92742 -> 92744 -> 92745 -> 92747 -> 92748 -> 92749 -> 92750 -> 92751 -> 92752 -> 92753 -> 92819 (foreverchanges.pro https://foreverchanges.pro/quest/92753 Storyline box, from Wowhead's Forever database, checked 2026-10-15). QuestieDB 1.0.5 has no chain links for it. Alba Fairmoon's Toxic Soil chain (Westfall) is not for Humans: Wowhead Forever https://www.wowhead.com/forever/quest=92750 lists Races [race=3], [race=4], [race=7], [race=95] (reqrace 4294967372, checked 2026-10-17); a Wowhead comment asks \"An entire dungeon questline for all alliance races except humans?\". The merged data has races 4294967373, which includes Human (issue #144)."
+		},
+		"92751": {
+			"set": {
+				"pre": [
+					92750
+				],
+				"preAny": [
+					92750
+				],
+				"races": 4294967372
+			},
+			"note": "Detonation at a Distance (92751) is step 8 of Alba Fairmoon's Westfall storyline \"Toxic Soil\" 92742 -> 92744 -> 92745 -> 92747 -> 92748 -> 92749 -> 92750 -> 92751 -> 92752 -> 92753 -> 92819 (foreverchanges.pro https://foreverchanges.pro/quest/92753 Storyline box, from Wowhead's Forever database, checked 2026-10-15). QuestieDB 1.0.5 has no chain links for it. Alba Fairmoon's Toxic Soil chain (Westfall) is not for Humans: Wowhead Forever https://www.wowhead.com/forever/quest=92751 lists Races [race=3], [race=4], [race=7], [race=95] (reqrace 4294967372, checked 2026-10-17); a Wowhead comment asks \"An entire dungeon questline for all alliance races except humans?\". The merged data has races 4294967373, which includes Human (issue #144)."
+		},
+		"92752": {
+			"set": {
+				"pre": [
+					92751
+				],
+				"preAny": [
+					92751
+				],
+				"races": 4294967372
+			},
+			"note": "Explosive Consultation (92752) is step 9 of Alba Fairmoon's Westfall storyline \"Toxic Soil\" 92742 -> 92744 -> 92745 -> 92747 -> 92748 -> 92749 -> 92750 -> 92751 -> 92752 -> 92753 -> 92819 (foreverchanges.pro https://foreverchanges.pro/quest/92753 Storyline box, from Wowhead's Forever database, checked 2026-10-15). QuestieDB 1.0.5 has no chain links for it. Alba Fairmoon's Toxic Soil chain (Westfall) is not for Humans: Wowhead Forever https://www.wowhead.com/forever/quest=92752 lists Races [race=3], [race=4], [race=7], [race=95] (reqrace 4294967372, checked 2026-10-17); a Wowhead comment asks \"An entire dungeon questline for all alliance races except humans?\". The merged data has races 4294967373, which includes Human (issue #144)."
+		},
+		"92753": {
+			"set": {
+				"pre": [
+					92752
+				],
+				"preAny": [
+					92752
+				],
+				"races": 4294967372
+			},
+			"note": "Destruction in Deadmines (92753) is step 10 of Alba Fairmoon's Westfall storyline \"Toxic Soil\" 92742 -> 92744 -> 92745 -> 92747 -> 92748 -> 92749 -> 92750 -> 92751 -> 92752 -> 92753 -> 92819 (foreverchanges.pro https://foreverchanges.pro/quest/92753 Storyline box, from Wowhead's Forever database, checked 2026-10-15). QuestieDB 1.0.5 has no chain links for it. Alba Fairmoon's Toxic Soil chain (Westfall) is not for Humans: Wowhead Forever https://www.wowhead.com/forever/quest=92753 lists Races [race=3], [race=4], [race=7], [race=95] (reqrace 4294967372, checked 2026-10-17); a Wowhead comment asks \"An entire dungeon questline for all alliance races except humans?\". The merged data has races 4294967373, which includes Human (issue #144)."
+		},
+		"92819": {
+			"set": {
+				"pre": [
+					92753
+				],
+				"preAny": [
+					92753
+				],
+				"races": 4294967372
+			},
+			"note": "Destruction in Deadmines (92819) is step 11 of Alba Fairmoon's Westfall storyline \"Toxic Soil\" 92742 -> 92744 -> 92745 -> 92747 -> 92748 -> 92749 -> 92750 -> 92751 -> 92752 -> 92753 -> 92819 (foreverchanges.pro https://foreverchanges.pro/quest/92753 Storyline box, from Wowhead's Forever database, checked 2026-10-15); a Wowhead Forever comment on quest=92753 (2026-10-01) says to leave the Deadmines by the back door and continue with Alba Fairmoon at the exit. QuestieDB 1.0.5 has no chain links for it. Alba Fairmoon's Toxic Soil chain (Westfall) is not for Humans: Wowhead Forever https://www.wowhead.com/forever/quest=92819 lists Races [race=3], [race=4], [race=7], [race=95] (reqrace 4294967372, checked 2026-10-17); a Wowhead comment asks \"An entire dungeon questline for all alliance races except humans?\". The merged data has races 4294967373, which includes Human (issue #144)."
+		},
+		"92911": {
+			"set": {
+				"pre": [
+					92910
+				],
+				"preAny": [
+					92910
+				]
+			},
+			"note": "The second Harvesting the Harvesters 92911 (Westfall, Ozwin Ironsprocket) comes after the one started by the Precessive Autocognition Assembly, 92910: its text on https://www.wowhead.com/forever/quest=92911 opens \"I see... this gives me some insight into what makes those monsters tick\" and goes on \"I'll continue tinkering with the assembly you brought me\" (checked 2026-10-17). Issue #51. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"94373": {
+			"set": {
+				"next": 94374
+			},
+			"note": "Dwarf Shaman Call of Earth series 94373 -> 94374 -> 94375 (Wowhead Forever quest=94373..94375 Series box, checked 2026-10-12). QuestieDB 1.0.5 has no chain links for it."
+		},
+		"94374": {
+			"set": {
+				"pre": [
+					94373
+				],
+				"preAny": [
+					94373
+				],
+				"next": 94375
+			},
+			"note": "Second step of the Dwarf Shaman Call of Earth series (Wowhead Forever quest=94374, checked 2026-10-12)."
+		},
+		"94375": {
+			"set": {
+				"pre": [
+					94374
+				],
+				"preAny": [
+					94374
+				]
+			},
+			"note": "Third step of the Dwarf Shaman Call of Earth series (Wowhead Forever quest=94375, checked 2026-10-12)."
+		},
+		"94466": {
+			"set": {
+				"objectives": [
+					{
+						"type": "item",
+						"id": 5026,
+						"count": 1,
+						"text": "Fire Tar"
+					},
+					{
+						"type": "item",
+						"id": 6652,
+						"count": 1,
+						"text": "Reagent Pouch"
+					}
+				]
+			},
+			"note": "Call of Fire (Dun Morogh, Dwarf Shaman) lists Fire Tar first, then the Reagent Pouch: Wowhead Forever https://www.wowhead.com/forever/quest=94466, checked 2026-10-16. The merged data has the two the other way round, so `quest 94466.1` named the pouch."
+		},
+		"95495": {
+			"set": {
+				"pre": [
+					95494,
+					95507
+				],
+				"preAll": [
+					95494,
+					95507
+				],
+				"preAny": []
+			},
+			"note": "The Hermit Tanner (Barrens, Walton) is offered only after both of Vrang's quests, Bruised Pride and Lion Hides 95494 and Vrang's Game 95507: Wowhead Forever's Series box on https://www.wowhead.com/forever/quest=95621 lists \"1. Bruised Pride and Lion Hides, Vrang's Game; 2. The Hermit Tanner; 3. Trouble in the Valley\" (checked 2026-10-16). QuestieDB 1.0.5 has no prerequisite."
+		},
+		"95508": {
+			"set": {
+				"objectives": [
+					{
+						"type": "kill",
+						"id": 261367,
+						"count": 1,
+						"text": "Assist Walton"
+					}
+				],
+				"pre": [
+					95621
+				],
+				"preAny": [
+					95621
+				]
+			},
+			"note": "Unwelcome Guests (Barrens): Wowhead Forever https://www.wowhead.com/forever/quest=95508 lists one objective \"Assist Walton\" (1), credited by npc=261367 Terry Longdrink (level 19, hostile to the Horde, at The Barrens 41.8,11.4; https://www.wowhead.com/forever/npc=261367), checked 2026-10-13. QuestieDB 1.0.5 has no objectives. Unwelcome Guests comes after Trouble in the Valley 95621: two Wowhead Forever comments on https://www.wowhead.com/forever/quest=95508 back the order, and Polestar's saved variables from the client record Walton's quest window opening without 95508 or 95621 (not offered), checked 2026-10-16. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"95621": {
+			"set": {
+				"pre": [
+					95495
+				],
+				"preAny": [
+					95495
+				]
+			},
+			"note": "Trouble in the Valley (Barrens, Walton) comes after The Hermit Tanner 95495: Wowhead Forever's Series box on https://www.wowhead.com/forever/quest=95621 lists \"1. Bruised Pride and Lion Hides, Vrang's Game; 2. The Hermit Tanner; 3. Trouble in the Valley\" (checked 2026-10-16). QuestieDB 1.0.5 has no prerequisite."
+		},
+		"95646": {
+			"set": {
+				"pre": [
+					275
+				],
+				"preAny": [
+					275
+				]
+			},
+			"note": "Horrors in the Highland (Excavation Site: Wetlands) is offered by Rethiel the Greenwarden only after his Wetlands chain The Greenwarden 463 -> Tramping Paws 276 -> Fire Taboo 277 -> Blisters on the Land 275: two Wowhead Forever comments on https://www.wowhead.com/forever/quest=95646 (2026-10-02, \"Prerequisites ... 1. The Greenwarden 2. Tramping Paws 3. Fire Taboo 4. Blisters on The Land\" and \"you must do the previous 3 quests from the Greenwarden before he offers this one\"), checked 2026-10-15. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"95774": {
+			"set": {
+				"pre": [
+					4921
+				],
+				"preAny": [
+					4921
+				]
+			},
+			"note": "Her Name Is Olgra (Barrens, Mankrik) comes after Lost in Battle 4921: Wowhead Forever's Series box on https://www.wowhead.com/forever/quest=95774 lists \"1. Lost in Battle; 2. Her Name Is Olgra\", and its text (\"she has died in battle. Her name is Olgra\") follows finding her body (checked 2026-10-16). Issue #65: Mankrik did not offer it beside Lost in Battle. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"96395": {
+			"set": {
+				"races": null,
+				"start": {
+					"npc": [
+						265002
+					],
+					"object": [],
+					"item": []
+				},
+				"end": {
+					"npc": [
+						265002
+					],
+					"object": []
+				}
+			},
+			"note": "An Ancient Grudge (The Hall of Thanes) is open to both sides and starts and ends inside with the Ghostly Attendant 265002: Wowhead Forever https://www.wowhead.com/forever/quest=96395 Quick Facts \"Type: Dungeon\", \"Side: None\" (its list row side 0), and two comments (\"Quest starts and ends inside the dungeon\", 2026-09-21; \"The NPC that gives this quest [npc=265002 Ghostly Attendant] is located within the Hall of Thanes\", 2026-10-04), checked 2026-10-15. QuestieDB 1.0.5 has no giver or ender and an Alliance race mask."
+		},
+		"96821": {
+			"set": {
+				"objectives": [
+					{
+						"type": "kill",
+						"id": 266850,
+						"count": 6,
+						"text": "Ridgeshade Creeper"
+					},
+					{
+						"type": "kill",
+						"id": 266849,
+						"count": 6,
+						"text": "Ridgeshade Lurker"
+					}
+				]
+			},
+			"note": "Legging It (Durotar) lists the Ridgeshade Creepers first, then the Ridgeshade Lurkers: Wowhead Forever https://www.wowhead.com/forever/quest=96821, checked 2026-10-16. The merged data has the two the other way round, so `quest 96821.1` named the Lurkers."
+		},
+		"96899": {
+			"set": {
+				"pre": [
+					96897,
+					96898
+				],
+				"preAll": [
+					96897,
+					96898
+				],
+				"preAny": []
+			},
+			"note": "Bandarion Keep (Tirisfal, Hadric Harlson) is offered only after both The Cult of the Damned 96897 and Remnants of War 96898: a Wowhead Forever comment on https://www.wowhead.com/forever/quest=96899 (\"*beta* 96898 and 96897 must be completed first\"), and its text (\"You've done a great thing for the cause of the Argent Dawn here today...\") follows them (checked 2026-10-16). Issue #128 (whiteswag): Hadric did not offer it beside the two. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"96984": {
+			"set": {
+				"breadcrumbs": [
+					92434
+				]
+			},
+			"note": "Heart of Disruption (City of Dalaran, Horde) has Blood in the Streets 92434 as its breadcrumb: Wowhead Forever comments on https://www.wowhead.com/forever/quest=96984 (\"Breadcrumb: Blood in the Streets\") and quest=92434 (\"Leads To: Heart of Disruption\"), 2026-10-03, checked 2026-10-15."
+		},
+		"97289": {
+			"set": {
+				"pre": [
+					97288
+				],
+				"preAny": [
+					97288
+				]
+			},
+			"note": "Unending Torment (97289, Master Apothecary Faranell, Undercity) is step 2 of the Ruins of Lordaeron series 97288 -> 97289 -> 97290 -> 97291 -> 97292: Wowhead Forever https://www.wowhead.com/forever/quest=97289 Series box, and its text (Faranell hands back the Head of the Baron, provided, to set by Othmar's body) follows 97288, the Abominable Head The Baron drops inside, delivered to her (checked 2026-10-16). QuestieDB 1.0.6 has no prerequisite, so the Ruins of Lordaeron pick-up guide sent players to accept it before the run (issue #50)."
+		},
+		"97290": {
+			"set": {
+				"pre": [
+					97289
+				],
+				"preAny": [
+					97289
+				]
+			},
+			"note": "Unending Torment (97290) is step 3 of the series 97288 -> 97289 -> 97290 -> 97291 -> 97292 (Wowhead Forever https://www.wowhead.com/forever/quest=97290 Series box, checked 2026-10-16): the Unfinished Abomination 271613 that 97289 ends at gives it. QuestieDB 1.0.6 has no prerequisite."
+		},
+		"97291": {
+			"set": {
+				"pre": [
+					97290
+				],
+				"preAny": [
+					97290
+				]
+			},
+			"note": "Unending Torment (97291) is step 4 of the series 97288 -> 97289 -> 97290 -> 97291 -> 97292 (Wowhead Forever https://www.wowhead.com/forever/quest=97291 Series box; its text opens \"With the head reattached\", checked 2026-10-16). QuestieDB 1.0.6 has no prerequisite."
+		},
+		"97292": {
+			"set": {
+				"pre": [
+					97291
+				],
+				"preAny": [
+					97291
+				]
+			},
+			"note": "Unending Torment (97292) is step 5 of the series 97288 -> 97289 -> 97290 -> 97291 -> 97292 (Wowhead Forever https://www.wowhead.com/forever/quest=97292 Series box; Faranell's Hissing Serum is concocted from 97291's reagents, checked 2026-10-16). QuestieDB 1.0.6 has no prerequisite."
+		},
+		"97485": {
+			"set": {
+				"objectives": [
+					{
+						"type": "item",
+						"id": 278078,
+						"count": 1,
+						"text": "Prepared Incense"
+					},
+					{
+						"type": "event",
+						"id": null,
+						"count": null,
+						"text": "Spread incense",
+						"map": 1456,
+						"f": "e",
+						"x": 53.3,
+						"y": 87.9
+					}
+				]
+			},
+			"note": "Traditions of the Bluff (Thunder Bluff): Wowhead Forever https://www.wowhead.com/forever/quest=97485 lists \"Prepared Incense\" (item=278078, 1) and \"Spread incense\" (1, kill credit npc=269255 \"[DNT] Kill Credit: Spread Incense\", which has no spawns: https://www.wowhead.com/forever/npc=269255); item=278078 is used \"over the southern cliff of Hunter Rise\" (https://www.wowhead.com/forever/item=278078); a quest comment (2026-09-20) places the ceremonial site at Thunder Bluff 53.3,87.9. Checked 2026-10-13. The spread is an event at that site (no spawns for the credit NPC); Thunder Bluff's frame is the same in Era and Forever. QuestieDB 1.0.5 has no objectives."
+		},
+		"98094": {
+			"set": {
+				"pre": [
+					528
+				],
+				"preAny": [
+					528
+				]
+			},
+			"note": "Scout Support (Hillsbrad, High Executor Darthalia, for Deathstalker Masoj) is offered only after Battle of Hillsbrad part II 528: a Wowhead Forever comment on https://www.wowhead.com/forever/quest=98094 (\"Prerequisite is 528 (part II)\"), checked 2026-10-16. Issue #148 (Taako): Darthalia did not offer it with 527 turned in and 528 open. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"98209": {
+			"set": {
+				"pre": [
+					98208
+				],
+				"preAny": [
+					98208
+				]
+			},
+			"note": "Bloom of the Heavens (98209, Sylessa Duskwhisper's delivery to Thundris Windweaver) comes after Bloom of the Heavens 98208, recovering Nord'el from the wreck south of Menethil: the quest chain on https://foreverchanges.pro/quest/98209, which for quests new in Forever comes from Wowhead's Forever database (checked 2026-10-17) lists the two in that order, and its text asks you to deliver the Nord'el. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"98297": {
+			"set": {
+				"pre": [
+					98291
+				],
+				"preAny": [
+					98291
+				]
+			},
+			"note": "Stopping the Cycle (Wetlands, Howin Kindfeather) is offered only after Death to the Dragonmaw 98291, also from Howin: two Wowhead Forever comments on https://www.wowhead.com/forever/quest=98297, checked by the maintainer on #51 (2026-10-16). 98291's Dragonmaw Reclaimer, Soulbinder and Infiltrator (271351, 271348, 271346) are elite on Wowhead Forever (their corrections in this file), so the simulator leaves 98291 out. QuestieDB 1.0.6 has no prerequisite."
+		},
+		"98298": {
+			"set": {
+				"pre": [
+					99
+				],
+				"preAny": [
+					99
+				]
+			},
+			"note": "The Forever Arugal's Folly 98298 (Silverpine, Dalar Dawnweaver) comes after the Classic one, 99: Wowhead Forever's Series box on https://www.wowhead.com/forever/quest=98298 lists 421, 422, 423, 424, 99 and then 98298 (checked 2026-10-17). Issue #51. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"98386": {
+			"set": {
+				"pre": [
+					89
+				],
+				"preAny": [
+					89
+				]
+			},
+			"note": "Alther's Mill (Redridge, Foreman Oslow) is offered only after The Everstill Bridge 89 is handed in: two Wowhead Forever comments on https://www.wowhead.com/forever/quest=98386 (\"Seems to require The Everstill Bridge\", \"Acquired after turning in 89\"), checked 2026-10-16. Issue #126's report shows it not offered at the mill (\"[n/a] Kill Greater Tarantula\"). QuestieDB 1.0.5 has no prerequisite."
+		},
+		"98389": {
+			"set": {
+				"objectives": [
+					{
+						"type": "event",
+						"id": null,
+						"count": null,
+						"text": "Free 6 Webbed Forsaken",
+						"map": 1420,
+						"f": "e",
+						"x": 24.67,
+						"y": 59.39
+					}
+				]
+			},
+			"note": "A Light in the Darkness (Tirisfal): Wowhead Forever https://www.wowhead.com/forever/quest=98389 lists \"Webbed Forsaken freed\" (6), credited by npc=271961 Webbed Forsaken, which is friendly to the Horde and has 8 map points in Night's Web Hollow (https://www.wowhead.com/forever/npc=271961), checked 2026-10-13. Encoded as an event and not a kill: freeing a friendly NPC is an interaction, not a fight. The position is the Webbed Forsaken spawn nearest the centroid of its 24 spawns in data/forever (Tirisfal 24.67,59.39, Era frame = Forever frame). QuestieDB 1.0.5 has no objectives."
+		},
+		"98418": {
+			"set": {
+				"pre": [
+					98417
+				],
+				"preAny": [
+					98417
+				]
+			},
+			"note": "Shared Fury (Ashenvale, Maseara Autumnmoon) comes after Vengeful Trail 98417: the quest chain on https://foreverchanges.pro/quest/98418, which for quests new in Forever comes from Wowhead's Forever database (checked 2026-10-17) lists \"1. Vengeful Trail; 2. Shared Fury\", and its text reads from Kurothel's written words, the scroll Vengeful Trail finds. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"98435": {
+			"set": {
+				"pre": [
+					760
+				],
+				"preAny": [
+					760
+				]
+			},
+			"note": "Thunderhorn's Report (Mulgore, Mull Thunderhorn) comes after Wildmane Cleansing 760: Wowhead Forever's Series box on https://www.wowhead.com/forever/quest=98435 lists \"1. Wildmane Cleansing; 2. Thunderhorn's Report\" (checked 2026-10-16). Issue #51. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"98823": {
+			"set": {
+				"pre": [
+					95664
+				],
+				"preAny": [
+					95664
+				]
+			},
+			"note": "Earthen Echo (98823, Bashana Runetotem, Thunder Bluff) follows Elder Knowledge 95664, which starts from the Titan Relic dropped inside the Excavation Site (Wetlands) and ends at Bashana: Wowhead Forever https://www.wowhead.com/forever/quest=98823 Series box (1. Elder Knowledge, 2. Earthen Echo), and Bashana provides the relic she examined (checked 2026-10-16). QuestieDB 1.0.6 has no prerequisite, so the Excavation Site pick-up guide sent Horde players to accept it before the run."
+		},
+		"98824": {
+			"set": {
+				"pre": [
+					95810
+				],
+				"preAny": [
+					95810
+				]
+			},
+			"note": "Prehistoric Prism (98824, Prospector Whelgar, Wetlands) follows Lost Relic Carry 95810, which starts from the Titan Relic dropped inside the Excavation Site (Wetlands) and ends at Whelgar: Wowhead Forever https://www.wowhead.com/forever/quest=98824 Series box (1. Lost Relic Carry, 2. Prehistoric Prism), and Whelgar provides the relic he authenticated (checked 2026-10-16). QuestieDB 1.0.6 has no prerequisite, so the Excavation Site pick-up guide sent Alliance players to accept it before the run."
+		},
+		"99053": {
+			"set": {
+				"objectives": [
+					{
+						"type": "event",
+						"id": null,
+						"count": null,
+						"text": "Escort Lynessa Duskblossom out of Ban'ethil"
+					}
+				]
+			},
+			"note": "Escaping Ban'ethil (Teldrassil) is an escort: Wowhead Forever https://www.wowhead.com/forever/quest=99053 lists one objective \"Escort Lynessa Duskblossom out of Ban'ethil\" (1) with no map point; a comment says it completes when she reaches the road (checked 2026-10-13). QuestieDB 1.0.5 has no objectives. No map point: the event runs where it starts (Sentinel Lynessa Duskblossom 275744)."
+		},
+		"99080": {
+			"set": {
+				"pre": [
+					99101
+				],
+				"preAny": [
+					99101
+				]
+			},
+			"note": "Drive Them Out (Mulgore, Baine Bloodhoof) comes after Our Ancient Enemy 99101: Wowhead Forever's Series box on https://www.wowhead.com/forever/quest=99080 lists \"1. Longwalker Malah; 2. Grim Tidings; 3. Our Ancient Enemy; 4. Drive Them Out; 5. The High Chieftain\" (checked 2026-10-16). Issue #112 (Kori): Our Ancient Enemy was not offered before Longwalker Malah and Grim Tidings. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"99081": {
+			"set": {
+				"pre": [
+					99079
+				],
+				"preAny": [
+					99079
+				]
+			},
+			"note": "Grim Tidings (Mulgore, Malah Longwind) comes after Longwalker Malah 99079: Wowhead Forever's Series box on https://www.wowhead.com/forever/quest=99101 lists \"1. Longwalker Malah; 2. Grim Tidings; 3. Our Ancient Enemy; 4. Drive Them Out; 5. The High Chieftain\" (checked 2026-10-16). Issue #112 (Kori): Our Ancient Enemy was not offered before Longwalker Malah and Grim Tidings. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"99082": {
+			"set": {
+				"pre": [
+					99080
+				],
+				"preAny": [
+					99080
+				]
+			},
+			"note": "The High Chieftain (Mulgore, Baine Bloodhoof) comes after Drive Them Out 99080: Wowhead Forever's Series box on https://www.wowhead.com/forever/quest=99082 lists \"1. Longwalker Malah; 2. Grim Tidings; 3. Our Ancient Enemy; 4. Drive Them Out; 5. The High Chieftain\" (checked 2026-10-16). Issue #112 (Kori): Our Ancient Enemy was not offered before Longwalker Malah and Grim Tidings. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"99101": {
+			"set": {
+				"pre": [
+					99081
+				],
+				"preAny": [
+					99081
+				]
+			},
+			"note": "Our Ancient Enemy (Mulgore, Brave Wildrunner) comes after Grim Tidings 99081: Wowhead Forever's Series box on https://www.wowhead.com/forever/quest=99101 lists \"1. Longwalker Malah; 2. Grim Tidings; 3. Our Ancient Enemy; 4. Drive Them Out; 5. The High Chieftain\" (checked 2026-10-16). Issue #112 (Kori): Our Ancient Enemy was not offered before Longwalker Malah and Grim Tidings. QuestieDB 1.0.5 has no prerequisite."
+		},
+		"99123": {
+			"set": {
+				"objectives": [
+					{
+						"type": "event",
+						"id": null,
+						"count": null,
+						"text": "Escort Pal'juh out of Kolkar Crag."
+					}
+				]
+			},
+			"note": "Lost in the Shadows (Durotar) is an escort: Wowhead Forever https://www.wowhead.com/forever/quest=99123 lists one objective \"Escort Pal'juh out of Kolkar Crag.\" (1) with no map point (checked 2026-10-13). QuestieDB 1.0.5 has no objectives. No map point: the event runs where it starts (Pal'juh 275811)."
+		},
+		"99134": {
+			"set": {
+				"objectives": [
+					{
+						"type": "event",
+						"id": null,
+						"count": null,
+						"text": "Motivate 5 Deathguards",
+						"map": 1420,
+						"f": "e",
+						"x": 60.7,
+						"y": 51.93
+					}
+				]
+			},
+			"note": "Discipline (Tirisfal): Wowhead Forever quest=99134 lists \"Deathguards motivated\" (5), an NPC group of 23 Deathguards friendly to the Horde, and a comment that any Deathguard in Deathknell or around Brill counts, checked 2026-10-13; Wowhead Forever item=286176 Executor's Motivator is the provided item used on them, checked 2026-10-13. Encoded as an event and not a kill: it is an item use on friendly NPCs, not a fight. The position is Deathguard Cyrus 1746 beside Executor Zygand in Brill: data/forever spawn Tirisfal 60.7,51.93; Wowhead Forever npc=1746 map data 60.4-60.6,52, checked 2026-10-13. QuestieDB 1.0.5 has no objectives."
+		},
+		"99144": {
+			"set": {
+				"objectives": [
+					{
+						"type": "event",
+						"id": null,
+						"count": null,
+						"text": "Escort Bareth Dawnstone out of Crusader's Outpost"
+					}
+				]
+			},
+			"note": "Seeking Refuge (Tirisfal) is an escort: Wowhead Forever https://www.wowhead.com/forever/quest=99144 lists one objective \"Escort Bareth Dawnstone out of Crusader's Outpost\" (1) with no map point (checked 2026-10-13). QuestieDB 1.0.5 has no objectives. No map point: the event runs where it starts (Bareth Dawnstone 275954)."
+		},
+		"99152": {
+			"set": {
+				"classes": 2
+			},
+			"note": "As Above, So Below (Hilda the Breaker 246389, Bandarion Keep) is Paladin-only: Mike_'s in-game report (Discord, Polestar 0.2.3, Scourge Mage 11): Polestar marked it 'Not offered by Hilda the Breaker', which it does only when the giver's quest window opened without the quest; warcraft.wiki.gg https://warcraft.wiki.gg/wiki/Hilda_the_Breaker: Hilda the Breaker is a Forsaken paladin trainer at Bandarion Keep, the Undead Paladin hub (checked 2026-10-15). QuestieDB 1.0.5 has no class gate (classes null)."
+		},
+		"99153": {
+			"set": {
+				"classes": 2
+			},
+			"note": "The One That Got Away (Ephram Barbaro 259190, Bandarion Keep) is Paladin-only: Mike_'s in-game report (Discord, Polestar 0.2.3, Scourge Mage 11): Polestar marked it 'Not offered by Ephram Barbaro', which it does only when the giver's quest window opened without the quest; warcraft.wiki.gg https://warcraft.wiki.gg/wiki/Hilda_the_Breaker: Hilda the Breaker is a Forsaken paladin trainer at Bandarion Keep, the Undead Paladin hub (checked 2026-10-15). QuestieDB 1.0.5 has no class gate (classes null)."
+		},
+		"99156": {
+			"set": {
+				"pre": [
+					356
+				],
+				"preAny": [
+					356
+				]
+			},
+			"note": "The second Rear Guard Patrol (Tirisfal, Deathguard Linnea; Riptear) comes after the first, Rear Guard Patrol 356: Wowhead Forever's Series box on https://www.wowhead.com/forever/quest=99156 lists \"1. Rear Guard Patrol; 2. Rear Guard Patrol\" (checked 2026-10-16). Issue #51. QuestieDB 1.0.5 has no prerequisite."
+		}
+	},
+	"npcs": {
+		"43": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=43 (https://www.wowhead.com/forever/npc=43): Mine Spider is Elite in Forever (checked 2026-10-13); the merged Era data has rank 0 (Normal)."
+		},
+		"471": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=471: Mother Fang is Elite in Forever (checked 2026-10-13); pfQuest's Era rank is 4 (rare)."
+		},
+		"639": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=639 (https://www.wowhead.com/forever/npc=639): Edwin VanCleef is Elite in Forever (checked 2026-10-13); the merged Era data has rank 2 (Rare Elite)."
+		},
+		"1756": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=1756 (https://www.wowhead.com/forever/npc=1756): Stormwind Royal Guard is Elite in Forever (checked 2026-10-13); the merged Era data has rank 0 (Normal)."
+		},
+		"2753": {
+			"set": {
+				"rank": 4
+			},
+			"note": "Wowhead Forever npc=2753 (https://www.wowhead.com/forever/npc=2753): Barnabus is Rare in Forever (checked 2026-10-13); the merged Era data has rank 0 (Normal)."
+		},
+		"2756": {
+			"set": {
+				"name": "Grund Drokda",
+				"subName": null,
+				"level": 5,
+				"faction": "A"
+			},
+			"addSpawns": {
+				"1426": {
+					"f": "e",
+					"pts": [
+						[
+							28.6,
+							67.4
+						],
+						[
+							28.6,
+							67.6
+						]
+					]
+				}
+			},
+			"note": "Grund Drokda (Dun Morogh, 97277 Grund and Gozwin) reuses the Era record \"UNUSED Grund Drokda <Reuse Me>\", which has no spawns: Wowhead Forever npc=2756 gives the name, level 5, Alliance-friendly, and map data Dun Morogh 28.6,67.4 and 28.6,67.6 (checked 2026-10-13). Dun Morogh's frame is the same in Era and Forever."
+		},
+		"3736": {
+			"set": {
+				"rank": 4
+			},
+			"note": "Wowhead Forever npc=3736 (https://www.wowhead.com/forever/npc=3736): Darkslayer Mordenthal is Rare in Forever (checked 2026-10-13); the merged Era data has rank 0 (Normal)."
+		},
+		"4438": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=4438 (https://www.wowhead.com/forever/npc=4438): Razorfen Spearhide is Elite in Forever (checked 2026-10-13); the merged Era data has rank 2 (Rare Elite)."
+		},
+		"5891": {
+			"addSpawns": {
+				"1426": {
+					"f": "e",
+					"pts": [
+						[
+							24.8,
+							61.8
+						]
+					]
+				}
+			},
+			"note": "Minor Manifestation of Earth, summoned at the Spirit Stone in Dun Morogh for the Dwarf Shaman Call of Earth (94374/94375): Wowhead Forever npc=5891 map data, Dun Morogh 24.8,61.8 (checked 2026-10-12). Dun Morogh's frame is the same in Era and Forever."
+		},
+		"7846": {
+			"set": {
+				"rank": 2
+			},
+			"note": "Wowhead Forever npc=7846 (https://www.wowhead.com/forever/npc=7846): Teremus the Devourer is Rare Elite in Forever (checked 2026-10-13); the merged Era data has rank 3 (Boss)."
+		},
+		"9024": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=9024 (https://www.wowhead.com/forever/npc=9024): Pyromancer Loregrain is Elite in Forever (checked 2026-10-13); the merged Era data has rank 2 (Rare Elite)."
+		},
+		"9025": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=9025 (https://www.wowhead.com/forever/npc=9025): Lord Roccor is Elite in Forever (checked 2026-10-13); the merged Era data has rank 2 (Rare Elite)."
+		},
+		"9041": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=9041 (https://www.wowhead.com/forever/npc=9041): Warder Stilgiss is Elite in Forever (checked 2026-10-13); the merged Era data has rank 2 (Rare Elite)."
+		},
+		"9042": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=9042 (https://www.wowhead.com/forever/npc=9042): Verek is Elite in Forever (checked 2026-10-13); the merged Era data has rank 2 (Rare Elite)."
+		},
+		"9736": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=9736 (https://www.wowhead.com/forever/npc=9736): Quartermaster Zigris is Elite in Forever (checked 2026-10-13); the merged Era data has rank 2 (Rare Elite)."
+		},
+		"10819": {
+			"set": {
+				"rank": 2
+			},
+			"note": "Wowhead Forever npc=10819 (https://www.wowhead.com/forever/npc=10819): Baron Bloodbane is Rare Elite in Forever (checked 2026-10-13); the merged Era data has rank 4 (Rare)."
+		},
+		"11383": {
+			"set": {
+				"rank": 2
+			},
+			"note": "Wowhead Forever npc=11383 (https://www.wowhead.com/forever/npc=11383): High Priestess Hai'watna is Rare Elite in Forever (checked 2026-10-13); the merged Era data has rank 1 (Elite)."
+		},
+		"14242": {
+			"addSpawns": {
+				"1413": {
+					"f": "e",
+					"pts": [
+						[
+							47.8,
+							77.6
+						]
+					]
+				}
+			},
+			"note": "Sulhasa gives and takes back the Forever quest Field to Clear (98093) in the southern Barrens, up a tree east of Gann Stonespire at 47.8,77.6 (https://foreverchanges.pro/quest/98093, checked 2026-10-14); the merged data has her only at her Era flight master posts in Un'Goro Crater and Silithus."
+		},
+		"14454": {
+			"set": {
+				"rank": 2
+			},
+			"note": "Wowhead Forever npc=14454 (https://www.wowhead.com/forever/npc=14454): The Windreaver is Rare Elite in Forever (checked 2026-10-13); the merged Era data has rank 1 (Elite)."
+		},
+		"14457": {
+			"set": {
+				"rank": 2
+			},
+			"note": "Wowhead Forever npc=14457 (https://www.wowhead.com/forever/npc=14457): Princess Tempestria is Rare Elite in Forever (checked 2026-10-13); the merged Era data has rank 1 (Elite)."
+		},
+		"14461": {
+			"set": {
+				"rank": 2
+			},
+			"note": "Wowhead Forever npc=14461 (https://www.wowhead.com/forever/npc=14461): Baron Charr is Rare Elite in Forever (checked 2026-10-13); the merged Era data has rank 1 (Elite)."
+		},
+		"14464": {
+			"set": {
+				"rank": 2
+			},
+			"note": "Wowhead Forever npc=14464 (https://www.wowhead.com/forever/npc=14464): Avalanchion is Rare Elite in Forever (checked 2026-10-13); the merged Era data has rank 1 (Elite)."
+		},
+		"209797": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=209797 (https://www.wowhead.com/forever/npc=209797): Bruuz is Elite in Forever (checked 2026-10-13); the merged Era data has rank 0 (Normal)."
+		},
+		"214519": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=214519 (https://www.wowhead.com/forever/npc=214519): Incinerator Gar'im is Elite in Forever (checked 2026-10-13); the merged Era data has rank 0 (Normal)."
+		},
+		"221367": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=221367 (https://www.wowhead.com/forever/npc=221367): Wyrmkin Berserker is Elite in Forever (checked 2026-10-13); the merged Era data has rank 0 (Normal)."
+		},
+		"238126": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=238126 (https://www.wowhead.com/forever/npc=238126): Ridolus is Elite in Forever (checked 2026-10-13); the merged Era data has rank 0 (Normal)."
+		},
+		"248278": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=248278: Croaky is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"248299": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=248299: Elmpaw is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"248362": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=248362: Shinyfinder Narf is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"248464": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=248464: Nimsy is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"248474": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=248474: Geosculptor Yip is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"249239": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=249239: Rugged Traveler is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"249240": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=249240: Ragged Traveler is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250483": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=250483: Witherfang is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250488": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=250488: Tarantula is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250621": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=250621: Cadaver is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250622": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=250622: Ragged Ghoul is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250623": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=250623: Mangled Cadaver is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250624": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=250624: Skeletal Mage is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250626": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=250626: Skeletal Soldier is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250627": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=250627: Ghoul is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250630": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=250630: Plague Ghoul is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250656": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=250656: Fallen Berserker is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250657": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=250657: Rath'mael is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250660": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=250660: The Baron is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250689": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=250689: Living Monstrosity is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"250926": {
+			"addSpawns": {
+				"2521": {
+					"f": "l",
+					"pts": [
+						[
+							37,
+							24.6
+						],
+						[
+							37.2,
+							26.4
+						],
+						[
+							37.4,
+							26.6
+						],
+						[
+							37.6,
+							25.2
+						],
+						[
+							37.8,
+							26.8
+						],
+						[
+							37.8,
+							29
+						],
+						[
+							38,
+							26.4
+						],
+						[
+							38,
+							30.2
+						],
+						[
+							38.4,
+							27.8
+						],
+						[
+							38.8,
+							27.4
+						],
+						[
+							39,
+							27.6
+						],
+						[
+							39.8,
+							27.6
+						],
+						[
+							40.2,
+							26.4
+						],
+						[
+							40.4,
+							27
+						],
+						[
+							41.1,
+							26.5
+						],
+						[
+							41.2,
+							27.6
+						],
+						[
+							41.4,
+							25.2
+						],
+						[
+							41.4,
+							26.4
+						],
+						[
+							41.6,
+							25.2
+						],
+						[
+							41.6,
+							26.2
+						],
+						[
+							41.6,
+							27
+						],
+						[
+							41.6,
+							27.8
+						]
+					]
+				}
+			},
+			"note": "Scrawny Ursera (Zephras Isle, Aggressive Encroachment 92473): Wowhead Forever https://www.wowhead.com/forever/npc=250926 map data has 22 spawns, from the slope west of Thendal Village (41-41.6,25-28) south-west to 37,24.6 (checked 2026-10-16). QuestieDB's Forever store has 173 points, 31 of them east of 41.7 inside Thendal Village (41.7-43.3,23-28), where none spawn: the step's arrow led into the village (Sato's report, issue #93). Replaces the map's spawns with Wowhead's points, in Forever's frame."
+		},
+		"250936": {
+			"set": {
+				"rank": 4
+			},
+			"note": "Wowhead Forever npc=250936: Den'dralass is Rare (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"251968": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=251968: Ayessa Dawnsinger is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"252475": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=252475: Elaadrin Evengale is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"254588": {
+			"addSpawns": {
+				"2521": {
+					"f": "l",
+					"pts": [
+						[
+							42.6,
+							66.4
+						],
+						[
+							44,
+							66.3
+						],
+						[
+							44.4,
+							65
+						],
+						[
+							44.6,
+							65.2
+						],
+						[
+							44.6,
+							65.8
+						],
+						[
+							45.6,
+							61.4
+						],
+						[
+							45.8,
+							47.8
+						],
+						[
+							46,
+							47.4
+						],
+						[
+							46.8,
+							46.2
+						],
+						[
+							47.4,
+							50.4
+						],
+						[
+							47.4,
+							50.6
+						],
+						[
+							47.6,
+							50.4
+						],
+						[
+							49.2,
+							59.4
+						],
+						[
+							49.2,
+							63.8
+						],
+						[
+							49.2,
+							65.6
+						],
+						[
+							49.6,
+							61
+						],
+						[
+							49.6,
+							67
+						],
+						[
+							51,
+							61
+						],
+						[
+							51.2,
+							58.8
+						],
+						[
+							51.2,
+							69.4
+						],
+						[
+							51.2,
+							70.6
+						],
+						[
+							51.4,
+							69.8
+						],
+						[
+							51.6,
+							69.4
+						],
+						[
+							51.6,
+							70.4
+						],
+						[
+							51.6,
+							70.6
+						],
+						[
+							51.6,
+							71.9
+						],
+						[
+							51.8,
+							73.2
+						],
+						[
+							51.8,
+							73.8
+						],
+						[
+							52.2,
+							58.4
+						],
+						[
+							52.2,
+							58.6
+						],
+						[
+							52.3,
+							74.7
+						],
+						[
+							52.4,
+							75.6
+						],
+						[
+							52.5,
+							75.4
+						],
+						[
+							52.6,
+							75.9
+						],
+						[
+							53.1,
+							77.2
+						],
+						[
+							53.2,
+							56.2
+						],
+						[
+							53.4,
+							57.2
+						],
+						[
+							53.4,
+							77.6
+						],
+						[
+							53.8,
+							77
+						],
+						[
+							53.9,
+							77.6
+						],
+						[
+							54.3,
+							79.3
+						],
+						[
+							55.2,
+							50.6
+						],
+						[
+							56.6,
+							56.2
+						],
+						[
+							62.3,
+							60.5
+						],
+						[
+							63.4,
+							58.4
+						],
+						[
+							63.4,
+							60.4
+						],
+						[
+							63.5,
+							60.4
+						],
+						[
+							63.6,
+							58.4
+						],
+						[
+							63.6,
+							60.7
+						],
+						[
+							64.1,
+							61.8
+						],
+						[
+							64.1,
+							63
+						],
+						[
+							65.3,
+							62
+						],
+						[
+							65.6,
+							62.2
+						],
+						[
+							68.4,
+							62.2
+						],
+						[
+							68.6,
+							62.2
+						]
+					]
+				}
+			},
+			"note": "Windsong Crawler (Zephras Isle, 93317 and the hunter's 94978): Wowhead Forever https://www.wowhead.com/forever/npc=254588 map data has 55 spawns on the shores and slopes, none within 300 yards of Valanaar (checked 2026-10-16). QuestieDB has a cluster of 8 points inside Valanaar (58.1-59.7, 72.7-74), among its quest givers, which became the step's first spot. Replaces the map's spawns with Wowhead's points, in Forever's frame."
+		},
+		"254589": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=254589: Vulgara the Insatiable is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"254596": {
+			"addSpawns": {
+				"2521": {
+					"f": "l",
+					"pts": [
+						[
+							63.7,
+							68.7
+						],
+						[
+							65,
+							66.7
+						],
+						[
+							65.3,
+							65.2
+						],
+						[
+							65.4,
+							65.6
+						],
+						[
+							65.4,
+							68.4
+						],
+						[
+							65.4,
+							68.8
+						],
+						[
+							65.5,
+							65.6
+						],
+						[
+							65.5,
+							68.1
+						],
+						[
+							65.5,
+							69.3
+						],
+						[
+							65.8,
+							64.4
+						],
+						[
+							65.8,
+							65.4
+						],
+						[
+							66.1,
+							67.3
+						],
+						[
+							66.6,
+							68.3
+						]
+					]
+				}
+			},
+			"note": "Al'Aketh Healer (Zephras Isle, 92642): Wowhead Forever https://www.wowhead.com/forever/npc=254596 map data has 13 spawns at 63.7-66.6, 64.4-69.3 (checked 2026-10-16). QuestieDB has points beside Yorana Windyreed at the eastern watchtower (68.9,67.4-67.7) and one inside Valanaar next to Falfaan Halfwind (60.25,74.29), where Wowhead has none. Replaces the map's spawns with Wowhead's points, in Forever's frame."
+		},
+		"255109": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=255109: Flesh Golem is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"255964": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=255964: Fallen Necromancer is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"257615": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=257615: Crazed Darkhound is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"259385": {
+			"set": {
+				"rank": 4
+			},
+			"note": "Wowhead Forever npc=259385: Tel'daeor the Stormspeaker is Rare (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"259388": {
+			"set": {
+				"rank": 4
+			},
+			"note": "Wowhead Forever npc=259388: Mystmane is Rare (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"259398": {
+			"set": {
+				"rank": 4
+			},
+			"note": "Wowhead Forever npc=259398: Galemender Delanea is Rare (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"259897": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=259897: Old Fire-Eye is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"260396": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=260396: Whispering Horror is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"261319": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=261319: Durgen Dirgehammer is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"263389": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=263389: Enraged Apparition is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"263390": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=263390: Tormented Soul is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"266851": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=266851: Ukorsbane is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"266852": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=266852: Halikor is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"267006": {
+			"addSpawns": {
+				"1420": {
+					"f": "e",
+					"pts": [
+						[
+							66.2,
+							63.4
+						],
+						[
+							66.6,
+							65.4
+						],
+						[
+							66.6,
+							65.5
+						],
+						[
+							67,
+							63.4
+						],
+						[
+							67.2,
+							64.3
+						],
+						[
+							67.4,
+							67
+						],
+						[
+							67.8,
+							66.2
+						],
+						[
+							68.1,
+							64.2
+						],
+						[
+							68.2,
+							64.8
+						],
+						[
+							68.6,
+							62.9
+						],
+						[
+							68.8,
+							64.6
+						],
+						[
+							69,
+							63.6
+						],
+						[
+							69,
+							65.6
+						],
+						[
+							69.8,
+							64.4
+						],
+						[
+							69.8,
+							64.5
+						],
+						[
+							70.3,
+							65.8
+						]
+					]
+				}
+			},
+			"note": "Dark Neophyte (Tirisfal Glades, Balnir Farmstead, 96897/96898): Wowhead Forever https://www.wowhead.com/forever/npc=267006 map data has 16 spawns at 66.2-70.3, 62.9-67 (checked 2026-10-16). QuestieDB has 7 points around Hadric Harlson (65.8-66.5, 60.8-62.2), the quest giver, where Wowhead has none within 80 yards: the step's goal and first spot sat on him. Replaces the map's spawns with Wowhead's points."
+		},
+		"267307": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=267307: Chol'aruk is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"268623": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=268623: Outraged Pillager is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"269004": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=269004: Icemaw is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"269213": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=269213: Hailspite is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"270294": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=270294: Baron Marinous is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"271346": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=271346: Dragonmaw Infiltrator is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"271348": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=271348: Dragonmaw Soulbinder is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"271351": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=271351: Dragonmaw Reclaimer is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"271750": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=271750: Tar Ooze is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"272116": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=272116: Xethorr the Wicked is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"272173": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=272173: Venture Co. Clearclutter is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"275044": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=275044: Dragonmaw Warder is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"275046": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=275046: Dragonmaw Thaumaturgist is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"275437": {
+			"addSpawns": {
+				"1420": {
+					"f": "e",
+					"pts": [
+						[
+							66.1,
+							65.5
+						],
+						[
+							66.3,
+							63.3
+						],
+						[
+							66.6,
+							63
+						],
+						[
+							66.6,
+							65.4
+						],
+						[
+							67,
+							62
+						],
+						[
+							67.1,
+							64.2
+						],
+						[
+							67.4,
+							67
+						],
+						[
+							67.6,
+							65.5
+						],
+						[
+							67.7,
+							66.5
+						],
+						[
+							67.8,
+							64.2
+						],
+						[
+							68,
+							64.6
+						],
+						[
+							68.2,
+							63
+						],
+						[
+							68.5,
+							65
+						],
+						[
+							68.6,
+							62.9
+						],
+						[
+							69,
+							63.7
+						],
+						[
+							69.3,
+							65.9
+						],
+						[
+							69.6,
+							64.6
+						],
+						[
+							69.8,
+							64.2
+						],
+						[
+							69.9,
+							65.9
+						]
+					]
+				}
+			},
+			"note": "Dark Enforcer (Tirisfal Glades, Balnir Farmstead, 96897): Wowhead Forever https://www.wowhead.com/forever/npc=275437 map data has 19 spawns at 66.1-69.9, 62-67 (checked 2026-10-16). QuestieDB has 6 points around Hadric Harlson (65.7-66.3, 60.1-62.1), the quest giver, where Wowhead has none within 60 yards. Replaces the map's spawns with Wowhead's points."
+		},
+		"275666": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=275666: Aggor the Young is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"276020": {
+			"set": {
+				"rank": 1
+			},
+			"note": "Wowhead Forever npc=276020: Riptear is Elite (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"276061": {
+			"set": {
+				"rank": 4
+			},
+			"note": "Wowhead Forever npc=276061: Decrepit Harvester is Rare (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"276099": {
+			"set": {
+				"rank": 4
+			},
+			"note": "Wowhead Forever npc=276099: Wrathvine is Rare (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"276101": {
+			"set": {
+				"rank": 4
+			},
+			"note": "Wowhead Forever npc=276101: Nightscreech is Rare (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"276180": {
+			"set": {
+				"rank": 4
+			},
+			"note": "Wowhead Forever npc=276180: Elder Finseer is Rare (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"276194": {
+			"set": {
+				"rank": 4
+			},
+			"note": "Wowhead Forever npc=276194: Dustwind Eggtender is Rare (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		},
+		"276198": {
+			"set": {
+				"rank": 4
+			},
+			"note": "Wowhead Forever npc=276198: Shal'ma is Rare (checked 2026-10-13); QuestieDB's Forever store gives every Forever npc rank 0."
+		}
+	},
+	"objects": {
+		"673494": {
+			"addSpawns": {
+				"1412": {
+					"f": "l",
+					"pts": [
+						[
+							58.6,
+							47.4
+						],
+						[
+							58.6,
+							47.5
+						]
+					]
+				}
+			},
+			"note": "Shredder Operation Instructions, one of Fizsprocket's notes for 98424 Fizsprocket's Notes (Mulgore), has no spawns in the merged data: Wowhead Forever object=673494 map data (checked 2026-10-13), in Forever's Mulgore frame (it differs from Era's)."
+		},
+		"673496": {
+			"addSpawns": {
+				"1412": {
+					"f": "l",
+					"pts": [
+						[
+							61.7,
+							47.3
+						]
+					]
+				}
+			},
+			"note": "Barrens Operations Best Practices, one of Fizsprocket's notes for 98424 Fizsprocket's Notes (Mulgore), has no spawns in the merged data: Wowhead Forever object=673496 map data (checked 2026-10-13), in Forever's Mulgore frame (it differs from Era's)."
+		},
+		"673497": {
+			"addSpawns": {
+				"1412": {
+					"f": "l",
+					"pts": [
+						[
+							59,
+							46.4
+						],
+						[
+							59,
+							46.5
+						]
+					]
+				}
+			},
+			"note": "One \"Gerenzo\", of Stonetalon, one of Fizsprocket's notes for 98424 Fizsprocket's Notes (Mulgore), has no spawns in the merged data: Wowhead Forever object=673497 map data (checked 2026-10-13), in Forever's Mulgore frame (it differs from Era's)."
+		}
+	},
+	"items": {
+		"5359": {
+			"removeDrops": {
+				"object": [
+					176344
+				]
+			},
+			"note": "Lorgalis Manuscript comes only from the Pitted Iron Chest 13949 in Blackfathom Deeps (QuestieDB 1.0.5 objectDrops [13949]; Wowhead Forever item=5359 contained-in lists only 13949, checked 2026-10-12). pfQuest also lists Document Chest 176344 (Barrens/Thousand Needles), which is a different quest's chest."
+		}
+	}
+}

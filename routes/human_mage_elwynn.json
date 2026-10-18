@@ -1,0 +1,294 @@
+{
+ "name": "Human mage - Elwynn, Westfall, Redridge, Duskwood 1-30",
+ "stages": [
+  {
+   "name": "Northshire - wolves and kobolds",
+   "min_level": 1,
+   "max_level": 3,
+   "center": [
+    -8788.5,
+    -136.1,
+    82.6
+   ],
+   "radius": 70.0,
+   "mobs": [
+    299,
+    69,
+    6
+   ],
+   "spawns_in_area": 30
+  },
+  {
+   "name": "Northshire - vineyards",
+   "min_level": 3,
+   "max_level": 6,
+   "center": [
+    -9076.5,
+    -308.0,
+    73.4
+   ],
+   "radius": 70.0,
+   "mobs": [
+    38,
+    257,
+    80
+   ],
+   "spawns_in_area": 27
+  },
+  {
+   "name": "Elwynn - west of Goldshire",
+   "min_level": 6,
+   "max_level": 8,
+   "center": [
+    -9567.5,
+    507.0,
+    50.0
+   ],
+   "radius": 110.0,
+   "mobs": [
+    525,
+    113,
+    94,
+    30
+   ],
+   "spawns_in_area": 16
+  },
+  {
+   "name": "Elwynn - south",
+   "min_level": 8,
+   "max_level": 10,
+   "center": [
+    -9433.9,
+    -565.3,
+    67.7
+   ],
+   "radius": 110.0,
+   "mobs": [
+    524,
+    1922,
+    476
+   ],
+   "spawns_in_area": 18
+  },
+  {
+   "name": "Elwynn - east",
+   "min_level": 10,
+   "max_level": 11,
+   "center": [
+    -8986.0,
+    -1201.9,
+    71.6
+   ],
+   "radius": 110.0,
+   "mobs": [
+    118,
+    46,
+    732,
+    478
+   ],
+   "spawns_in_area": 29
+  },
+  {
+   "name": "Westfall - Furlbrow's Pumpkin Patch (rusty golems, coyotes)",
+   "min_level": 11,
+   "max_level": 13,
+   "center": [
+    -9910.0,
+    1052.0,
+    38.0
+   ],
+   "radius": 90.0,
+   "mobs": [
+    480,
+    834,
+    199
+   ],
+   "spawns_in_area": 60
+  },
+  {
+   "name": "Elwynn - river murloc foragers (safe fallback)",
+   "min_level": 11,
+   "max_level": 13,
+   "center": [
+    -9400.0,
+    -1082.0,
+    53.0
+   ],
+   "radius": 90.0,
+   "mobs": [
+    46
+   ],
+   "spawns_in_area": 30
+  },
+  {
+   "name": "Westfall - south of Sentinel Hill (fleshrippers, goretusks, watchers)",
+   "min_level": 13,
+   "max_level": 15,
+   "center": [
+    -10600.0,
+    1480.0,
+    42.0
+   ],
+   "radius": 120.0,
+   "mobs": [
+    1109,
+    157,
+    114,
+    123
+   ],
+   "spawns_in_area": 60
+  },
+  {
+   "name": "Westfall - Alexston farmstead (pillagers, brutes) - west side, away from the dust devils",
+   "min_level": 15,
+   "max_level": 18,
+   "center": [
+    -11001.2,
+    1466.05,
+    43.2
+   ],
+   "radius": 120.0,
+   "mobs": [
+    589,
+    124,
+    157
+   ],
+   "spawns_in_area": 37
+  },
+  {
+   "name": "Redridge - goretusks and tarantulas north of the lake (dry, no condors)",
+   "min_level": 17,
+   "max_level": 19,
+   "center": [
+    -9742.0,
+    -1804.0,
+    49.0
+   ],
+   "radius": 100.0,
+   "mobs": [
+    547,
+    442
+   ],
+   "spawns_in_area": 10
+  },
+  {
+   "name": "Duskwood - young ravagers and black widows (Brightwood)",
+   "min_level": 23,
+   "max_level": 25,
+   "center": [
+    -10765.5,
+    -1352.3,
+    38.9
+   ],
+   "radius": 110.0,
+   "mobs": [
+    923,
+    930,
+    202
+   ],
+   "spawns_in_area": 13
+  },
+  {
+   "name": "Duskwood - Nightbane worgen and ravagers (Brightwood Grove)",
+   "min_level": 25,
+   "max_level": 27,
+   "center": [
+    -10280.9,
+    -935.5,
+    41.9
+   ],
+   "radius": 110.0,
+   "mobs": [
+    898,
+    628,
+    1258,
+    923
+   ],
+   "spawns_in_area": 12
+  },
+  {
+   "name": "Duskwood - Nightbane shadow weavers and dark runners",
+   "min_level": 27,
+   "max_level": 29,
+   "center": [
+    -10963.7,
+    -926.6,
+    70.8
+   ],
+   "radius": 110.0,
+   "mobs": [
+    533,
+    205
+   ],
+   "spawns_in_area": 27
+  },
+  {
+   "name": "Duskwood - Nightbane vile fangs and dark runners (Roland's Doom edge)",
+   "min_level": 29,
+   "max_level": 31,
+   "center": [
+    -11075.8,
+    -886.5,
+    63.1
+   ],
+   "radius": 110.0,
+   "mobs": [
+    206,
+    205
+   ],
+   "spawns_in_area": 21
+  },
+  {
+   "name": "Loch Modan - Wood Lurkers south-east (dry, no bears)",
+   "min_level": 16,
+   "max_level": 19,
+   "center": [
+    -5157.0,
+    -4140.6,
+    331.8
+   ],
+   "radius": 110.0,
+   "mobs": [
+    1185,
+    1192
+   ],
+   "spawns_in_area": 10
+  },
+  {
+   "name": "Wetlands - crocolisks and raptors south of Menethil",
+   "min_level": 24,
+   "max_level": 27,
+   "center": [
+    -3493.6,
+    -1406.0,
+    9.5
+   ],
+   "radius": 110.0,
+   "mobs": [
+    1400,
+    1020,
+    1021,
+    1022,
+    1417
+   ],
+   "spawns_in_area": 13
+  },
+  {
+   "name": "Duskwood - dire wolves and venom spiders north of Darkshire (dry, spread out)",
+   "min_level": 19,
+   "max_level": 22,
+   "center": [
+    -10157.0,
+    -75.0,
+    28.0
+   ],
+   "radius": 95.0,
+   "mobs": [
+    213,
+    217,
+    565
+   ],
+   "spawns_in_area": 11
+  }
+ ]
+}
